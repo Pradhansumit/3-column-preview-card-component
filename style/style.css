@@ -1,0 +1,132 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: hsl(0deg, 0%, 95%);
+  min-height: 100vh;
+  padding: 100px 0;
+}
+
+p {
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  line-height: 1.7rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.container .box-container img {
+  margin: 40px 0 32px 0;
+}
+.container .box-container h1 {
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 400;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 20px;
+}
+.container .box-container p {
+  color: hsla(0deg, 0%, 100%, 0.75);
+}
+.container .c1 {
+  background: hsl(31deg, 77%, 52%);
+}
+.container .c1 .button {
+  margin: 1.5rem 0 3rem 0;
+  padding: 15px 32px;
+  color: hsl(31deg, 77%, 52%);
+  background: hsl(0deg, 0%, 95%);
+  border: solid 2px hsl(0deg, 0%, 95%);
+  border-radius: 40px;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.container .c1 .button:hover {
+  color: hsl(0deg, 0%, 95%);
+  background: transparent;
+  border: solid 2px hsl(0deg, 0%, 95%);
+}
+.container .c2 {
+  background: hsl(184deg, 100%, 22%);
+}
+.container .c2 .button {
+  margin: 1.5rem 0 3rem 0;
+  padding: 15px 32px;
+  color: hsl(184deg, 100%, 22%);
+  background: hsl(0deg, 0%, 95%);
+  border: solid 2px hsl(0deg, 0%, 95%);
+  border-radius: 40px;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.container .c2 .button:hover {
+  color: hsl(0deg, 0%, 95%);
+  background: transparent;
+  border: solid 2px hsl(0deg, 0%, 95%);
+}
+.container .c3 {
+  background: hsl(179deg, 100%, 13%);
+}
+.container .c3 .button {
+  margin: 1.5rem 0 3rem 0;
+  padding: 15px 32px;
+  color: hsl(179deg, 100%, 13%);
+  background: hsl(0deg, 0%, 95%);
+  border: solid 2px hsl(0deg, 0%, 95%);
+  border-radius: 40px;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.container .c3 .button:hover {
+  color: hsl(0deg, 0%, 95%);
+  background: transparent;
+  border: solid 2px hsl(0deg, 0%, 95%);
+}
+
+@media screen and (min-width: 375px) and (max-width: 990px) {
+  .container {
+    width: 326px;
+  }
+  .container .box-container {
+    padding: 0 44px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+  .container .box-container {
+    width: 306px;
+    height: 500px;
+    padding: 48px;
+  }
+  .container .box-container img {
+    margin-top: 0;
+  }
+  .container .box-container .button {
+    margin-top: 74px;
+  }
+}/*# sourceMappingURL=style.css.map */

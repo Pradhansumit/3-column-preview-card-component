@@ -1,0 +1,138 @@
+//Colors
+
+//Primary
+
+$orange: hsl(31, 77%, 52%);
+$darkcyan: hsl(184, 100%, 22%);
+$verydarkcyan: hsl(179, 100%, 13%);
+
+//Neutral
+
+$tWhite: hsla(0, 0%, 100%, 0.75);
+$vlgray: hsl(0, 0%, 95%);
+
+//Typography
+$fLex: "Big Shoulders Display", cursive;
+$fBigShoulder: "Lexend Deca", sans-serif;
+$fsize: 15px;
+$freg: 400;
+$fbold: 700;
+
+//mixins
+@mixin Flex($dir, $jc) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jc;
+  align-items: center;
+}
+
+//components
+@mixin Button($color) {
+  margin: 1.5rem 0 3rem 0;
+  padding: 15px 32px;
+  color: $color;
+  background: $vlgray;
+  border: solid 2px $vlgray;
+  border-radius: 40px;
+  font-family: $fBigShoulder;
+  font-weight: $fbold;
+  cursor: pointer;
+  transition: all ease 0.3s;
+
+  &:hover {
+    color: $vlgray;
+    background: transparent;
+    border: solid 2px $vlgray;
+  }
+}
+
+//globals
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @include Flex(row, center);
+  background: $vlgray;
+  min-height: 100vh;
+  padding: 100px 0;
+}
+p {
+  font-size: $fsize;
+  font-family: $fBigShoulder;
+  line-height: 1.7rem;
+}
+.container {
+  @include Flex(column, space-evenly);
+  border-radius: 10px;
+  overflow: hidden;
+
+  .box-container {
+    img {
+      margin: 40px 0 32px 0;
+    }
+    h1 {
+      font-family: $fLex;
+      font-weight: $freg;
+      font-size: 40px;
+      text-transform: uppercase;
+      color: white;
+      margin-bottom: 20px;
+    }
+    p {
+      color: $tWhite;
+    }
+  }
+  .c1 {
+    background: $orange;
+    .button {
+      @include Button($orange);
+    }
+  }
+  .c2 {
+    background: $darkcyan;
+    .button {
+      @include Button($darkcyan);
+    }
+  }
+  .c3 {
+    background: $verydarkcyan;
+    .button {
+      @include Button($verydarkcyan);
+    }
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 990px) {
+  .container {
+    width: 326px;
+    .box-container {
+      padding: 0 44px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+
+    .box-container {
+      width: 306px;
+      height: 500px;
+      padding: 48px;
+
+      img {
+        margin-top: 0;
+      }
+      .button {
+        margin-top: 74px;
+      }
+    }
+  }
+}
